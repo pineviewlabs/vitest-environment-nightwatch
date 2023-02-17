@@ -15,6 +15,7 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "vitest-environment-nightwatch": "workspace:*",
     "@nightwatch/testing-library": "^0.1.1",
     "@nightwatch/vue": "^0.4.1",
     "@types/nightwatch": "^2.3.18",
