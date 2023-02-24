@@ -1,5 +1,5 @@
-import { CreateClientParams } from "nightwatch";
-import type { JSDOMOptions } from "vitest";
+import {CreateClientParams} from 'nightwatch';
+import type {JSDOMOptions} from 'vitest';
 
 declare module 'vitest' {
     interface EnvironmentOptions {

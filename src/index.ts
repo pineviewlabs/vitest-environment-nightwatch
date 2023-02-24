@@ -1,50 +1,39 @@
-import { beforeEach, afterEach } from "vitest";
-import nightwatch from "nightwatch";
-// import {setup} from '@nightwatch/vue'
+import nightwatch from 'nightwatch';
 
 const globalSetup = async (options = {}) => {
   return nightwatch.createClient(
     Object.assign(
       {},
       {
-        browserName: "chrome",
+        browserName: 'chrome',
         parallel: true,
         // enable_global_apis: true,
         always_async_commands: false,
         persist_globals: true,
         silent: true,
         headless: true,
-        output: true,
+        output: true
       },
       options
     )
   );
 };
 
-/* beforeEach(async (context) => {
-  const client = await globalSetup({});
-
-  context.browser = await client.launchBrowser();
-});
-
-afterEach(async ({ browser }) => {
-  await browser.end();
-  // await viteServer.close();
-}); */
-import type { Environment } from "vitest";
+import type {Environment} from 'vitest';
 
 export default <Environment>{
-  name: "nightwatch",
+  name: 'nightwatch',
   async setup(g, opt) {
-    const client = await globalSetup({});
+    const client = await globalSetup(opt);
     const browser = await client.launchBrowser();
 
-    g.client = client
-    g.browser = browser
+    g.client = client;
+    g.browser = browser;
+
     return {
       async teardown() {
         await browser.end();
-      },
+      }
     };
-  },
+  }
 };

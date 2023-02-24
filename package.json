@@ -20,7 +20,10 @@
       "default": "./dist/index.js"
     },
     "./types": {
-      "types": "./dist/types.d.ts"
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "require": "./dist/types.cjs",
+      "default": "./dist/types.cjs"
     }
   },
   "files": [
@@ -39,6 +42,7 @@
     "@nightwatch/testing-library": "^0.1.1",
     "@nightwatch/vue": "^0.4.1",
     "@types/nightwatch": "^2.3.18",
+    "@typescript-eslint/parser": "^5.53.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/ui": "^0.27.1",
     "chromedriver": "^109.0.0",

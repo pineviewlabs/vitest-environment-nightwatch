@@ -1,4 +1,4 @@
-import {setup} from '@nightwatch/vue'
+import {setup} from '@nightwatch/vue';
 
 export default {
   async beforeEach(browser, done) {
@@ -9,7 +9,7 @@ export default {
       }
     });
 
-    browser.launchUrl = `http://localhost:${this.viteServer.config.server.port}`
+    browser.launchUrl = `http://localhost:${this.viteServer.config.server.port}`;
     done();
     //context.browser = await client.launchBrowser();
   },
@@ -19,4 +19,4 @@ export default {
     await this.viteServer.close();
     done();
   }
-}
+};

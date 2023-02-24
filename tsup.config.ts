@@ -16,6 +16,7 @@ export default defineConfig([
   },
   {
     entryPoints: ["src/types.ts"],
+    format: ["esm", "cjs"],
     outDir: "dist",
     tsconfig: "./tsconfig.json",
     dts: true,

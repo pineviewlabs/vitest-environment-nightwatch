@@ -1,5 +1,5 @@
-import { beforeAll, afterAll } from 'vitest'
-import {setup} from '@nightwatch/vue'
+import {beforeAll, afterAll} from 'vitest';
+import {setup} from '@nightwatch/vue';
 
 beforeAll(async (context) => {
   // extend context
@@ -9,10 +9,10 @@ beforeAll(async (context) => {
     }
   });
 
-  browser.launchUrl = `http://localhost:${context.viteServer.config.server.port}`
-})
+  browser.launchUrl = `http://localhost:${context.viteServer.config.server.port}`;
+});
 
 afterAll(async ({viteServer}) => {
-  await browser.end()
+  await browser.end();
   await viteServer.close();
 });
