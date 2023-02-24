@@ -51,6 +51,17 @@ Update your [Vitest configuration](https://vitest.dev/config/#configuration) in
 }
 ```
 
+### Types
+Edit your `tsconfig.json` to include vitest-environment-nightwatch types for the
+vitest config.
+```json
+{
+  "compilerOptions": {
+    "types": ["vitest-environment-nightwatch/types"]
+  }
+}
+```
+
 ## Nightwatch options
 
 | Name| Type | Description | Default |
