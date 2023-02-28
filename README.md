@@ -4,7 +4,6 @@
   <img alt="Nightwatch.js Schematic Logo" src=".github/assets/nightwatch-logo.svg" width=200 />
 </p>
 
-[![Build Status][build-badge]][build]
 [![version][version-badge]][package]
 [![Discord][discord-badge]][discord]
 [![MIT License][license-badge]][license]
