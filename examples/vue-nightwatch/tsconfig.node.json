@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "types": ["vitest-environment-nightwatch/dist/types"]
+  },
+  "include": ["vite.config.ts"]
+}
