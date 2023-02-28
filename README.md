@@ -91,12 +91,16 @@ automatically. If this is disabled, you'll need to call `client.launchBrowser()`
 
 ### `global.browser`
 
-The Nightwatch [browser API](https://v2.nightwatchjs.org/api/#the-browser-object) object.
+The Nightwatch [browser
+API](https://v2.nightwatchjs.org/api/#the-browser-object) object. Created with
+`global.client.launchBrowser`.
 
 
 ### `global.client`
 
-The Vitest environment used the Nightwatch [programmatic API](https://v2.nightwatchjs.org/api/programmatic/) to create the Nightwatch instance and export the browser API. 
+The Vitest environment used the Nightwatch [programmatic
+API](https://v2.nightwatchjs.org/api/programmatic/) to create the Nightwatch
+instance and export the browser API. 
 
 Available properties/methods:
 - `.element(<locator>)` - use the Nightwatch [.element() API](https://v2.nightwatchjs.org/api/element/) to locate elements in the page;
