@@ -22,31 +22,31 @@ Update your [Vitest configuration](https://vitest.dev/config/#configuration) in
 
 ```js
 {
-	environment: "nightwatch",
+  environment: "nightwatch",
   environmentOptions: {
-		nightwatch: {
-			// Nightwatch related options (all optional)
-			headless: true,
-			browserName: 'chrome',
-			baseUrl: '',
-			verbose: false,
-			output: true,
-			env: null,
-			parallel: false,
-			devtools: false,
-			debug: false,
-			autoStartSession: true,
-			persistGlobals: true,
-			configFile: './nightwatch.conf.js',
-			globals: {},
-			webdriver: {},
-			timeout: null,
-			enableGlobalApis: false,
-			alwaysAsync: true,
-			desiredCapabilities: {},
-			async setup(browser) {},
-			async teardown(browser) {},
-		}
+    nightwatch: {
+	    // Nightwatch related options (all optional)
+	    headless: true,
+	    browserName: 'chrome',
+	    baseUrl: '',
+	    verbose: false,
+	    output: true,
+	    env: null,
+	    parallel: false,
+	    devtools: false,
+	    debug: false,
+	    autoStartSession: true,
+	    persistGlobals: true,
+	    configFile: './nightwatch.conf.js',
+	    globals: {},
+	    webdriver: {},
+	    timeout: null,
+	    enableGlobalApis: false,
+	    alwaysAsync: true,
+	    desiredCapabilities: {},
+	    async setup(browser) {},
+	    async teardown(browser) {},
+    }
   },
 	...
 }
