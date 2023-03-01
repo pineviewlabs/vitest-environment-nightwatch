@@ -32,5 +32,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: "pnpm"
     - run: pnpm i
+    - run: pnpm build
     # - run: npm run eslint
     - run: pnpm test
