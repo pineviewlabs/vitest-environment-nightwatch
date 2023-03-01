@@ -1,18 +1,18 @@
 import {beforeAll, afterAll} from 'vitest';
 import {setup} from '@nightwatch/vue';
 
-beforeAll(async (context) => {
+beforeAll(async () => {
   // extend context
-  context.viteServer = await setup({
+  globalThis.viteServer = await setup({
     vite_dev_server: {
       port: null
     }
   });
 
-  browser.launchUrl = `http://localhost:${context.viteServer.config.server.port}`;
+  browser.launchUrl = `http://localhost:${globalThis.viteServer.config.server.port}`;
 });
 
-afterAll(async ({viteServer}) => {
+afterAll(async () => {
   await browser.end();
   await viteServer.close();
 });

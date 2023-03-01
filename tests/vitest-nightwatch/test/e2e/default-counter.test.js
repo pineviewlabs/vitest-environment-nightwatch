@@ -3,7 +3,7 @@ import '../index.js';
 
 describe.concurrent('default counter end-to-end test', async () => {
 
-  test('should change count when button clicked', async ({viteServer}) => {
+  test('should change count when button clicked', async () => {
     await browser.navigateTo(`http://localhost:${viteServer.config.server.port}`);
     await browser.waitForElementVisible('body');
 

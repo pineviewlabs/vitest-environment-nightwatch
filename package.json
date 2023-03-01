@@ -7,7 +7,7 @@
     "build": "tsup",
     "publish": "npm run build && clean-publish",
     "release": "bumpp package.json --commit --push --tag && npm run publish",
-    "test": "vitest --no-threads"
+    "test": "pnpm -r run --filter=./tests/** test"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
