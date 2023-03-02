@@ -13,12 +13,5 @@ export default defineConfig([
     minifyIdentifiers: true,
     clean: true,
     dts: true,
-  },
-  {
-    entryPoints: ["src/types.ts"],
-    format: ["esm", "cjs"],
-    outDir: "dist",
-    tsconfig: "./tsconfig.json",
-    dts: true,
-  },
+  }
 ]);

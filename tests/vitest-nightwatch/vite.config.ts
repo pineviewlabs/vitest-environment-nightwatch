@@ -3,7 +3,6 @@
 import { defineConfig } from "vitest/config";
 import vue from "@vitejs/plugin-vue";
 import nightwatchPlugin from "vite-plugin-nightwatch";
-import "vitest-environment-nightwatch/types"
 
 // https://vitejs.dev/config/
 export default defineConfig({

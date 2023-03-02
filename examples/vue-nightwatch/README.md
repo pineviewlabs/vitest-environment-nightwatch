@@ -1,7 +1,5 @@
 # Test your Vue Components with Vitest and Nightwatch
 
-## Step 0: Create a new project with Vite
-
 Choose Vue and TypeScript when prompted below:
 
 ```bash
@@ -14,7 +12,13 @@ npm init vite@latest
 npm i -D vitest @vitest/ui @vitest/plugin-vue
 ```
 
-Since `vitest` is based on `vite`, you can use the same configuration file. Edit the `vite.config.ts` file to add the following. You'll also need to add a reference to Vitest types using a [triple slash command](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html#-reference-types-) at the top of your config file.
+Since `vitest` is based on `vite`, you can use the same configuration file. Edit
+the `vite.config.ts` file to add the following. You'll also need to add a
+reference to Vitest types using a [triple slash
+command](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html#-reference-types-)
+at the top of your config file. Adding the Nightwatch integration types would be
+also helpful for adding types to the `environmentOptions.nightwatch` property.
+See [this](https://github.com/Aslemammad/vitest-environment-nightwatch#types) for more information.
 
 ```ts 
 /// <reference types="vitest" />
@@ -23,22 +27,24 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   test: {
-    /* for example, use global to avoid globals imports (describe, test, expect): */
-    // globals: true,
+    environment: "nightwatch",
+    environmentOptions: { nightwatch: {} },
   },
 })
 ```
 
-Next, edit your `package.json` to add the `test` scripts:
+Now with running your tests, you have the Nightwatch
+[globals](https://github.com/Aslemammad/vitest-environment-nightwatch#api) which can be used
+like this:
 
-```json
-{
-  "scripts": {
-     "test": "vitest",
-     "test:ui": "vitest --ui",
-     "test:run": "vitest run"
-  }
-}
+```ts
+describe('counter end-to-end test', async () => {
+  test('should change count when button clicked', async () => {
+    await browser.init();
+    await browser.waitForElementVisible('body');
+
+    const button = await browser.getByRole('button');
+
+    await browser.expect.element(button).to.have.text.that.equals('count is 0');
+		...
 ```
-
----
