@@ -4,7 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "types": ["vitest-environment-nightwatch/dist/types"]
+    "types": ["vitest-environment-nightwatch/types"]
   },
   "include": ["vite.config.ts"]
 }
