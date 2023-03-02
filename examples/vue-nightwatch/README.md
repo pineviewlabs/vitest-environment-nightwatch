@@ -33,7 +33,7 @@ export default defineConfig({
 })
 ```
 
-With Vitest (hooks)[https://vitest.dev/api/#setup-and-teardown] we can inject
+With Vitest [hooks](https://vitest.dev/api/#setup-and-teardown) we can inject
 settings into the global browser object, for instance in this example we set the
 `launchUrl`:
 ```ts
@@ -54,7 +54,6 @@ afterAll(async () => {
   await browser.end();
   await globalThis.viteServer.close();
 });
-
 ```
 
 Now with running your tests, you have the Nightwatch
@@ -72,3 +71,5 @@ describe('counter end-to-end test', async () => {
     await browser.expect.element(button).to.have.text.that.equals('count is 0');
 		...
 ```
+
+Check the `src/` and `test/` directories for further information.
