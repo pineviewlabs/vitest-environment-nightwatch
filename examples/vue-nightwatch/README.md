@@ -22,6 +22,7 @@ See [this](https://github.com/Aslemammad/vitest-environment-nightwatch#types) fo
 
 ```ts 
 /// <reference types="vitest" />
+/// <reference types="vitest-environment-nightwatch/types" />
 
 import { defineConfig } from 'vite'
 
