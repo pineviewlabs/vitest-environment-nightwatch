@@ -1,4 +1,5 @@
 import nightwatch from 'nightwatch';
+// @ts-ignore
 import {setup} from '@nightwatch/vue';
 
 const globalSetup = async (options = {}) => {
@@ -21,6 +22,7 @@ const globalSetup = async (options = {}) => {
 };
 
 import type {Environment} from 'vitest';
+import type {ViteDevServer} from 'vite';
 
 export default <Environment>{
   name: 'nightwatch',
@@ -31,7 +33,7 @@ export default <Environment>{
     g.client = client;
     g.browser = browser;
 
-    const viteServer = await setup({
+    const viteServer: ViteDevServer = await setup({
       vite_dev_server: {
         port: null
       }
