@@ -1,4 +1,4 @@
-import {beforeAll, afterAll} from 'vitest';
+/* import {beforeAll, afterAll} from 'vitest';
 import {setup} from '@nightwatch/vue';
 
 beforeAll(async () => {
@@ -15,4 +15,4 @@ beforeAll(async () => {
 afterAll(async () => {
   await browser.end();
   await viteServer.close();
-});
+}); */

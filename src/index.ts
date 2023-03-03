@@ -1,4 +1,5 @@
 import nightwatch from 'nightwatch';
+import {setup} from '@nightwatch/vue';
 
 const globalSetup = async (options = {}) => {
   return nightwatch.createClient(
@@ -30,8 +31,17 @@ export default <Environment>{
     g.client = client;
     g.browser = browser;
 
+    const viteServer = await setup({
+      vite_dev_server: {
+        port: null
+      }
+    });
+
+    browser.launchUrl = `http://localhost:${viteServer.config.server.port}`;
+
     return {
       async teardown() {
+        await viteServer.close();
         await browser.end();
       }
     };
