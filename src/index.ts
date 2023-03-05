@@ -27,7 +27,7 @@ import type {ViteDevServer} from 'vite';
 export default <Environment>{
   name: 'nightwatch',
   async setup(g, opt) {
-    const client = await globalSetup(opt);
+    const client = await globalSetup(opt.nightwatch);
     const browser = await client.launchBrowser();
 
     g.client = client;

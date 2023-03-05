@@ -8,7 +8,7 @@ import nightwatchPlugin from "vite-plugin-nightwatch";
 export default defineConfig({
   test: {
     environment: "nightwatch",
-    environmentOptions: { nightwatch: {} },
+    environmentOptions: { nightwatch: { devtools: true } },
     // testTimeout: 60_000,
     // hookTimeout: 60_000,
   },
