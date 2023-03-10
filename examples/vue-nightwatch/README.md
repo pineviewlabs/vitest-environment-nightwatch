@@ -6,7 +6,7 @@ Choose Vue and TypeScript when prompted below:
 npm init vite@latest
 ``` 
 
-## Step 1: Install and Configure Vitest
+## Install and Configure Vitest
 
 ```bash
 npm i -D vitest @vitest/ui @vitest/plugin-vue
@@ -32,29 +32,6 @@ export default defineConfig({
     environmentOptions: { nightwatch: {} },
   },
 })
-```
-
-With Vitest [hooks](https://vitest.dev/api/#setup-and-teardown) we can inject
-settings into the global browser object, for instance in this example we set the
-`launchUrl`:
-```ts
-import {beforeAll, afterAll} from 'vitest';
-import {setup} from '@nightwatch/vue';
-
-beforeAll(async () => {
-  globalThis.viteServer = await setup({
-    vite_dev_server: {
-      port: null
-    }
-  });
-
-  browser.launchUrl = `http://localhost:${globalThis.viteServer.config.server.port}`;
-});
-
-afterAll(async () => {
-  await browser.end();
-  await globalThis.viteServer.close();
-});
 ```
 
 Now with running your tests, you have the Nightwatch

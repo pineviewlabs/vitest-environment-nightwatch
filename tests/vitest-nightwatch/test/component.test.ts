@@ -1,9 +1,7 @@
 import { describe, it, expect } from 'vitest'
 describe('Render Vue Component test', function() {
   it('checks the vue component', async function() {
-    console.log('here', browser.mountComponent)
     const formComponent = await browser.mountComponent('/src/components/Form.vue', '');
-    console.log('here 1')
 
     browser.expect.element(formComponent).to.be.present;
     browser.setValue('#movie-input', 'A Serious Man');
