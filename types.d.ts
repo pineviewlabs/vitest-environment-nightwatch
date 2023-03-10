@@ -1,4 +1,4 @@
-import type { Nightwatch, NightwatchAPI } from 'nightwatch';
+import type {Nightwatch, NightwatchAPI} from 'nightwatch';
 import {CreateClientParams} from 'nightwatch';
 import type {JSDOMOptions} from 'vitest';
 
@@ -13,8 +13,8 @@ declare module 'vitest' {
     }
 }
 declare global {
-    const client: Nightwatch
-    const browser: NightwatchAPI
+    const client: Nightwatch;
+    const browser: NightwatchAPI;
 }
 
-export {}
+export {};

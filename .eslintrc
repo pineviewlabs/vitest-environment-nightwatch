@@ -46,6 +46,7 @@
     ],
     "no-trailing-spaces": 0,
     "no-else-return": 2,
+    "no-undef": 0,
     "no-extra-bind": 0,
     "no-implicit-coercion": 0,
     "no-useless-call": 0,

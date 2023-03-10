@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import {describe, it, expect} from 'vitest';
 describe('Render Vue Component test', function() {
   it('checks the vue component', async function() {
     const formComponent = await browser.mountComponent('/src/components/Form.vue', '');
