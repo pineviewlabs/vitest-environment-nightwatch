@@ -4,7 +4,7 @@ import './index.js';
 describe.concurrent('default counter end-to-end test', async () => {
 
   test('should change count when button clicked', async () => {
-    await browser.navigateTo(`http://localhost:${globalThis.viteServer.config.server.port}`);
+    await browser.navigateTo(`http://localhost:${global.viteServer.config.server.port}`);
     await browser.waitForElementVisible('body');
 
     const button = await browser.getByRole('button');
