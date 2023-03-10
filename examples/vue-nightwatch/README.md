@@ -20,7 +20,7 @@ at the top of your config file. Adding the Nightwatch integration types would be
 also helpful for adding types to the `environmentOptions.nightwatch` property.
 See [this](https://github.com/Aslemammad/vitest-environment-nightwatch#types) for more information.
 
-```ts 
+```ts
 /// <reference types="vitest" />
 /// <reference types="vitest-environment-nightwatch/types" />
 
